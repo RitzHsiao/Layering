@@ -1,0 +1,26 @@
+[待辦]
+- 更改txt檔的位置(重要)
+- 整合成類別版(進行中)
+- log 檔案名稱自動含日期時間
+- 封裝為 SensorData 結構
+- 支援 update_robot_status()
+- 支援TCP傳輸
+- 設計目錄樹 directory tree
+- 確定定時讀取
+- 儲存力值
+
+[進行中]
+- 整合成類別版
+* 整理到 parse(整理完了 可以換下一個)
+
+[已完成] (好棒!)
+- 設定資料夾與檔案初始化 (initialize_files)
+- serial 初始化與連線錯誤處理 (initialize_serial)
+- 檢查感測器是否有回應的邏輯 (initialize_sensor)
+    *使用 b'c\r' 測試連線，有成功 response 才進行下一步
+- 接收原始資料並解析為數值 (parse_sensor_packet)
+-  解析出 Fx Fy Fz / Tx Ty Tz 並檢查單位一致性
+- 計算合力 magnitude (calculate_force)
+-  結束處理：中斷與關閉 serial
+- 加入config
+- 建立新py以管理sensor相關
